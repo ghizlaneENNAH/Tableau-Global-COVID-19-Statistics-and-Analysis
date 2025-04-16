@@ -1,0 +1,85 @@
+Steps to Create Tableau Public Dashboard and Upload to GitHub
+Download Tableau Public:
+
+If you don’t have Tableau Public installed, download it here.
+
+Execute SQL Queries:
+
+The SQL queries are located in the file SQL_Queries_Covid19.
+
+Execute the first query, then save the result in an Excel file as tableau_table1.xlsx.
+
+Execute the second query, then save the result in an Excel file as tableau_table2.xlsx.
+
+Execute the third query, then save the result in an Excel file as tableau_table3.xlsx.
+
+Execute the fourth query, then save the result in an Excel file as tableau_table4.xlsx.
+
+Data Cleaning:
+
+For Query 3, ensure that any NULL values in HighestInfectionCount and PercentPopulationInfected are replaced with 0.
+
+For Query 4, ensure that the date column is in short date format and replace any NULL values with 0.
+
+Import Data into Tableau:
+
+Open Tableau Public.
+
+Click "Microsoft Excel" to import the Excel files (tableau_table1.xlsx, tableau_table2.xlsx, tableau_table3.xlsx, tableau_table4.xlsx) as data sources.
+
+Create Visualizations:
+
+First Visualization (Global Numbers):
+
+Drag DeathPercentage, TotalCases, and TotalDeaths to the columns.
+
+Choose Table as the visualization type.
+
+Adjust the marks and format to display the values as needed.
+
+Format percentages to display as integers (e.g., 2%).
+
+Second Visualization (Location-wise Deaths):
+
+Drag Location to columns and SUM(Death) to rows.
+
+Sort by total deaths.
+
+Rename Location to Continent.
+
+Use the Marks section to customize the chart's appearance.
+
+Third Visualization (Map):
+
+Click on Location and assign Geographical Role → Country/Region.
+
+Drag Longitude to columns and Latitude to rows.
+
+Choose Map chart and drag Location and PercentPeopleAffected to the Marks section.
+
+Customize the map using Tableau’s map settings.
+
+Update the legend title to Percent Population Infected.
+
+Fourth Visualization (Time Series):
+
+Drag Date to columns and PercentPopulationInfected to rows.
+
+Filter the data by month.
+
+Add specific locations (countries) to the visualization and use Max for the percent.
+
+Apply Forecasting from the Analysis menu for predictive analysis.
+
+Dashboard:
+
+Create a new dashboard in Tableau.
+
+Set the size to Automatic to adjust to different screen sizes.
+
+Add all visualizations to the dashboard.
+
+Publish to Tableau Public:
+
+Once satisfied with your visualizations and dashboard, publish it to Tableau Public.
+
